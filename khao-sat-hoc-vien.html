@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khảo Sát Học Viên – NovaCenter</title>
+<meta name="description" content="Khảo sát ý kiến học viên NovaCenter: đánh giá chất lượng giảng dạy, phương pháp học và sự hài lòng.">
+<link rel="canonical" href="https://novacenter.vn/khao-sat-hoc-vien.html">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Bỏ qua và đến nội dung chính</a>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="NovaCenter Trang chủ">
+      <span class="logo-navy">Nova</span><span class="logo-orange">Center</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Menu chính">
+      <ul class="nav-list">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="khao-sat-hoc-vien.html" class="active" aria-current="page">Khảo sát HV</a></li>
+        <li><a href="lien-he.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="hero" style="background: linear-gradient(135deg, #0d1642, #1a237e, #283593);">
+    <div class="container">
+      <h1 class="hero-title reveal">Khảo Sát Học Viên</h1>
+      <p class="hero-subtitle reveal">Ý kiến của bạn giúp NovaCenter ngày càng tốt hơn</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <form class="survey-form reveal" id="survey-hv-form">
+        <div class="form-group">
+          <label for="hv-name">Họ và tên</label>
+          <input type="text" id="hv-name" name="hv_name" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="hv-email">Email</label>
+          <input type="email" id="hv-email" name="hv_email" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="hv-khoa">Khóa học đang học</label>
+          <select id="hv-khoa" name="khoa" required aria-required="true">
+            <option value="">Chọn khóa</option>
+            <option value="spark">SPARK</option>
+            <option value="rise">RISE</option>
+            <option value="leader">LEADER</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="hv-gv">Giáo viên chủ nhiệm</label>
+          <input type="text" id="hv-gv" name="gv_name" placeholder="Tên giáo viên">
+        </div>
+
+        <h3 class="mt-2">Vui lòng đánh giá (1 – 5 sao)</h3>
+
+        <div class="rating-group reveal">
+          <p><strong>1. Chất lượng giảng dạy của giáo viên</strong></p>
+          <div class="star-rating" data-name="q1">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q1" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>2. Phương pháp S.P.E.A.K phù hợp với bạn</strong></p>
+          <div class="star-rating" data-name="q2">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q2" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>3. Mức độ tiến bộ sau mỗi buổi học</strong></p>
+          <div class="star-rating" data-name="q3">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q3" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>4. Chất lượng tài liệu và sách giáo trình</strong></p>
+          <div class="star-rating" data-name="q4">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q4" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>5. Môi trường học tập và cơ sở vật chất</strong></p>
+          <div class="star-rating" data-name="q5">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q5" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>6. Sự hỗ trợ từ đội ngũ Admin/CSKH</strong></p>
+          <div class="star-rating" data-name="q6">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q6" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>7. Hoạt động ngoại khóa và cộng đồng</strong></p>
+          <div class="star-rating" data-name="q7">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q7" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>8. Lịch học và thời gian phù hợp</strong></p>
+          <div class="star-rating" data-name="q8">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q8" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>9. Giá trị học phí so với những gì nhận được</strong></p>
+          <div class="star-rating" data-name="q9">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q9" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>10. Khả năng giới thiệu NovaCenter cho bạn bè</strong></p>
+          <div class="star-rating" data-name="q10">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q10" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>11. Sự tự tin khi giao tiếp tiếng Anh sau khóa học</strong></p>
+          <div class="star-rating" data-name="q11">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q11" required>
+          </div>
+        </div>
+
+        <div class="rating-group reveal">
+          <p><strong>12. Tổng thể: Mức độ hài lòng với NovaCenter</strong></p>
+          <div class="star-rating" data-name="q12">
+            <button type="button" data-value="1" aria-label="1 sao">★</button>
+            <button type="button" data-value="2" aria-label="2 sao">★</button>
+            <button type="button" data-value="3" aria-label="3 sao">★</button>
+            <button type="button" data-value="4" aria-label="4 sao">★</button>
+            <button type="button" data-value="5" aria-label="5 sao">★</button>
+            <input type="hidden" name="q12" required>
+          </div>
+        </div>
+
+        <div class="form-group reveal">
+          <label for="hv-suggest">Điều bạn muốn NovaCenter cải thiện</label>
+          <textarea id="hv-suggest" name="suggestion" rows="4" placeholder="Chia sẻ ý kiến của bạn..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary reveal">Gửi khảo sát</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 NovaCenter. Mọi quyền được bảo lưu.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function() {
+  emailjs.init("YOUR_PUBLIC_KEY");
+  document.querySelectorAll('.star-rating').forEach(group => {
+    const buttons = group.querySelectorAll('button');
+    const input = group.querySelector('input[type="hidden"]');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = btn.dataset.value;
+        input.value = val;
+        buttons.forEach(b => {
+          b.style.color = b.dataset.value <= val ? '#ff6f00' : '#ccc';
+        });
+      });
+    });
+  });
+
+  document.getElementById('survey-hv-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let valid = true;
+    document.querySelectorAll('.star-rating input').forEach(inp => {
+      if (!inp.value) valid = false;
+    });
+    if (!valid) { alert('Vui lòng đánh giá tất cả các câu hỏi'); return; }
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(() => {
+        showToast('Cảm ơn bạn! Khảo sát đã được gửi.');
+        this.reset();
+        document.querySelectorAll('.star-rating button').forEach(b => b.style.color = '#ccc');
+      }, err => {
+        showToast('Gửi thất bại: ' + err.text);
+      });
+  });
+})();
+</script>
+<style>
+.rating-group { margin: 1.5rem 0; padding: 1rem; background: #fff; border-radius: 12px; border: 1px solid #eee; }
+.star-rating { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+.star-rating button { background: none; border: none; font-size: 1.8rem; color: #ccc; cursor: pointer; transition: color 0.2s; }
+.star-rating button:hover { color: #ff9800; }
+.survey-form { max-width: 700px; margin: 0 auto; }
+.mt-2 { margin-top: 2rem; }
+</style>
+</body>
+</html>

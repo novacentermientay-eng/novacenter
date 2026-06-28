@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin NovaCenter – Chấm Bài Writing & Speaking</title>
+<meta name="description" content="Trang quản trị NovaCenter cho giáo viên: xem bài nộp, chấm điểm Writing/Speaking, gửi kết quả qua email.">
+<link rel="canonical" href="https://novacenter.vn/admin.html">
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="shared.css">
+<style>
+.admin-table { width:100%; border-collapse:collapse; margin-top:1rem; }
+.admin-table th, .admin-table td { padding:0.75rem; border:1px solid #ddd; text-align:left; }
+.admin-table th { background:#1a237e; color:#fff; }
+.admin-table tr:nth-child(even) { background:#f8f9fa; }
+.score-input { width:60px; padding:0.4rem; border:1px solid #ccc; border-radius:4px; }
+.feedback-area { width:100%; min-height:80px; padding:0.5rem; border:1px solid #ccc; border-radius:4px; }
+.status-badge { padding:0.25rem 0.75rem; border-radius:12px; font-size:0.8rem; }
+.status-pending { background:#fff3e0; color:#e65100; }
+.status-graded { background:#e8f5e9; color:#2e7d32; }
+.status-sent { background:#e3f2fd; color:#1565c0; }
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Bỏ qua và đến nội dung chính</a>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="NovaCenter Trang chủ">
+      <span class="logo-navy">Nova</span><span class="logo-orange">Center</span>
+    </a>
+    <span class="admin-tag" style="color:#ff6f00; font-weight:600;">Admin Panel</span>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Menu chính">
+      <ul class="nav-list">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="admin.html" class="active" aria-current="page">Admin</a></li>
+        <li><a href="lien-he.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title reveal">Quản Lý Bài Nộp</h1>
+      <p class="reveal">Danh sách bài Writing & Speaking cần chấm điểm. Điền điểm, nhận xét và gửi kết quả qua email.</p>
+
+      <div class="filter-bar reveal" style="margin-bottom:1rem;">
+        <div class="filter-group">
+          <label for="filter-status">Trạng thái</label>
+          <select id="filter-status" aria-label="Lọc theo trạng thái">
+            <option value="all">Tất cả</option>
+            <option value="pending">Chờ chấm</option>
+            <option value="graded">Đã chấm</option>
+            <option value="sent">Đã gửi</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-skill">Kỹ năng</label>
+          <select id="filter-skill" aria-label="Lọc theo kỹ năng">
+            <option value="all">Tất cả</option>
+            <option value="writing">Writing</option>
+            <option value="speaking">Speaking</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-responsive reveal">
+        <table class="admin-table" id="submissions-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Học viên</th>
+              <th>Email</th>
+              <th>Kỹ năng</th>
+              <th>Ngày nộp</th>
+              <th>Trạng thái</th>
+              <th>Điểm</th>
+              <th>Nhận xét</th>
+              <th>Hành động</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="pending" data-skill="writing">
+              <td>#001</td>
+              <td>Nguyễn Văn A</td>
+              <td>nguyenvana@email.com</td>
+              <td>Writing</td>
+              <td>28/06/2026</td>
+              <td><span class="status-badge status-pending">Chờ chấm</span></td>
+              <td><input type="number" class="score-input" min="0" max="9" step="0.5" placeholder="0-9" aria-label="Điểm Writing"></td>
+              <td><textarea class="feedback-area" placeholder="Nhận xét chi tiết..." aria-label="Nhận xét"></textarea></td>
+              <td><button class="btn btn-small btn-primary" onclick="sendResult(this)">Gửi kết quả</button></td>
+            </tr>
+            <tr data-status="pending" data-skill="speaking">
+              <td>#002</td>
+              <td>Trần Thị B</td>
+              <td>tranthib@email.com</td>
+              <td>Speaking</td>
+              <td>27/06/2026</td>
+              <td><span class="status-badge status-pending">Chờ chấm</span></td>
+              <td><input type="number" class="score-input" min="0" max="9" step="0.5" placeholder="0-9" aria-label="Điểm Speaking"></td>
+              <td><textarea class="feedback-area" placeholder="Nhận xét chi tiết..." aria-label="Nhận xét"></textarea></td>
+              <td><button class="btn btn-small btn-primary" onclick="sendResult(this)">Gửi kết quả</button></td>
+            </tr>
+            <tr data-status="graded" data-skill="writing">
+              <td>#003</td>
+              <td>Lê Văn C</td>
+              <td>levanc@email.com</td>
+              <td>Writing</td>
+              <td>25/06/2026</td>
+              <td><span class="status-badge status-graded">Đã chấm</span></td>
+              <td>7.0</td>
+              <td>Viết tốt, cần cải thiện ngữ pháp phức tạp.</td>
+              <td><button class="btn btn-small btn-secondary" disabled>Đã gửi</button></td>
+            </tr>
+            <tr data-status="sent" data-skill="speaking">
+              <td>#004</td>
+              <td>Phạm Thị D</td>
+              <td>phamthid@email.com</td>
+              <td>Speaking</td>
+              <td>24/06/2026</td>
+              <td><span class="status-badge status-sent">Đã gửi</span></td>
+              <td>6.5</td>
+              <td>Phát âm rõ, cần thêm từ vựng học thuật.</td>
+              <td><button class="btn btn-small btn-secondary" disabled>Hoàn tất</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="text-center mt-2 reveal">
+        <p><em>Lưu ý: Đây là giao diện demo. Kết nối backend để lấy dữ liệu thực tế.</em></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 NovaCenter Admin. Chỉ dành cho giáo viên được ủy quyền.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+function sendResult(btn) {
+  const row = btn.closest('tr');
+  const score = row.querySelector('.score-input').value;
+  const feedback = row.querySelector('.feedback-area').value;
+  if (!score) { alert('Vui lòng nhập điểm'); return; }
+  if (!feedback) { alert('Vui lòng nhập nhận xét'); return; }
+
+  // Demo: cập nhật UI
+  row.dataset.status = 'sent';
+  const statusCell = row.querySelector('td:nth-child(6)');
+  statusCell.innerHTML = '<span class="status-badge status-sent">Đã gửi</span>';
+  const scoreCell = row.querySelector('td:nth-child(7)');
+  scoreCell.innerHTML = score;
+  const feedbackCell = row.querySelector('td:nth-child(8)');
+  feedbackCell.innerHTML = feedback;
+  const actionCell = row.querySelector('td:nth-child(9)');
+  actionCell.innerHTML = '<button class="btn btn-small btn-secondary" disabled>Hoàn tất</button>';
+
+  showToast('Đã gửi kết quả cho học viên!');
+}
+
+// Filter
+document.getElementById('filter-status').addEventListener('change', filterTable);
+document.getElementById('filter-skill').addEventListener('change', filterTable);
+function filterTable() {
+  const status = document.getElementById('filter-status').value;
+  const skill = document.getElementById('filter-skill').value;
+  document.querySelectorAll('#submissions-table tbody tr').forEach(row => {
+    const matchStatus = status === 'all' || row.dataset.status === status;
+    const matchSkill = skill === 'all' || row.dataset.skill === skill;
+    row.style.display = (matchStatus && matchSkill) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

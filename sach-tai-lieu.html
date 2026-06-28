@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sách & Tài Liệu NovaCenter – Thư Viện Học Tập</title>
+<meta name="description" content="Thư viện tài liệu NovaCenter: PDF, Audio, Video miễn phí. Filter theo khóa học và loại file. Tải về sau khi điền thông tin.">
+<link rel="canonical" href="https://novacenter.vn/sach-tai-lieu.html">
+<meta property="og:title" content="Sách & Tài Liệu NovaCenter – Thư Viện Học Tập">
+<meta property="og:description" content="Tài liệu học tiếng Anh miễn phí: PDF, Audio, Video từ NovaCenter.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://novacenter.vn/sach-tai-lieu.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Bỏ qua và đến nội dung chính</a>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="NovaCenter Trang chủ">
+      <span class="logo-navy">Nova</span><span class="logo-orange">Center</span>
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Menu chính">
+      <ul class="nav-list">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+        <li><a href="phuong-phap.html">Phương pháp</a></li>
+        <li><a href="khoa-hoc.html">Khóa học</a></li>
+        <li><a href="sach-tai-lieu.html" class="active" aria-current="page">Sách & Tài liệu</a></li>
+        <li><a href="lien-he.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <section class="hero" style="background: linear-gradient(135deg, #0d1642, #1a237e, #283593);">
+    <div class="container">
+      <h1 class="hero-title reveal">Thư Viện Tài Liệu</h1>
+      <p class="hero-subtitle reveal">Hơn 10 tài liệu PDF, Audio, Video miễn phí cho mọi trình độ</p>
+    </div>
+  </section>
+
+  <section class="section" id="filter">
+    <div class="container">
+      <div class="filter-bar reveal">
+        <div class="filter-group">
+          <label for="filter-khoa">Khóa học</label>
+          <select id="filter-khoa" aria-label="Lọc theo khóa học">
+            <option value="all">Tất cả</option>
+            <option value="spark">SPARK</option>
+            <option value="rise">RISE</option>
+            <option value="leader">LEADER</option>
+            <option value="general">Chung</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-loai">Loại file</label>
+          <select id="filter-loai" aria-label="Lọc theo loại file">
+            <option value="all">Tất cả</option>
+            <option value="pdf">PDF</option>
+            <option value="audio">Audio</option>
+            <option value="video">Video</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="tai-lieu">
+    <div class="container">
+      <h2 class="section-title reveal">Danh sách tài liệu</h2>
+      <div class="grid grid-3" id="tai-lieu-grid">
+        <div class="card reveal" data-khoa="spark" data-loai="pdf">
+          <div class="card-icon" aria-hidden="true">📄</div>
+          <h3>SPARK Starter Guide</h3>
+          <p class="meta">PDF · 24 trang · Khóa SPARK</p>
+          <p>Hướng dẫn bắt đầu cho học viên mới, bao gồm lộ trình học và mục tiêu đầu ra.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="spark-starter.pdf">Tải về</a>
+        </div>
+        <div class="card reveal" data-khoa="spark" data-loai="audio">
+          <div class="card-icon" aria-hidden="true">🎧</div>
+          <h3>SPARK Listening Drills</h3>
+          <p class="meta">Audio · 15 phút · Khóa SPARK</p>
+          <p>Bài tập nghe cơ bản với phát âm chuẩn Anh-Mỹ, tốc độ chậm rãi.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="spark-listening.mp3">Tải về</a>
+        </div>
+        <div class="card reveal" data-khoa="rise" data-loai="pdf">
+          <div class="card-icon" aria-hidden="true">📄</div>
+          <h3>RISE Vocabulary Builder</h3>
+          <p class="meta">PDF · 40 trang · Khóa RISE</p>
+          <p>1.000 từ vựng trung cấp theo chủ đề, có ví dụ và bài tập áp dụng.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="rise-vocab.pdf">Tải về</a>
+        </div>
+        <div class="card reveal" data-khoa="rise" data-loai="video">
+          <div class="card-icon" aria-hidden="true">🎬</div>
+          <h3>RISE Speaking Patterns</h3>
+          <p class="meta">Video · 20 phút · Khóa RISE</p>
+          <p>20 mẫu câu giao tiếp thông dụng, hướng dẫn ngữ điệu và cử chỉ.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="rise-speaking.mp4">Tải về</a>
+        </div>
+        <div class="card reveal" data-khoa="leader" data-loai="pdf">
+          <div class="card-icon" aria-hidden="true">📄</div>
+          <h3>LEADER Business English</h3>
+          <p class="meta">PDF · 60 trang · Khóa LEADER</p>
+          <p>Từ vựng và mẫu câu cho môi trường công sở, đàm phán, thuyết trình.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="leader-business.pdf">Tải về</a>
+        </div>
+        <div class="card reveal" data-khoa="leader" data-loai="audio">
+          <div class="card-icon" aria-hidden="true">🎧</div>
+          <h3>LEADER Podcast Collection</h3>
+          <p class="meta">Audio · 45 phút · Khóa LEADER</p>
+          <p>3 tập podcast về lãnh đạo, đổi mới và giao tiếp đa văn hóa.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="leader-podcast.mp3">Tải về</a>
+        </div>
+        <div class="card reveal" data-khoa="general" data-loai="pdf">
+          <div class="card-icon" aria-hidden="true">📄</div>
+          <h3>Grammar Cheat Sheet</h3>
+          <p class="meta">PDF · 12 trang · Chung</p>
+          <p>Tóm tắt ngữ pháp từ cơ bản đến nâng cao, dễ tra cứu.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="grammar-cheatsheet.pdf">Tải về</a>
+        </div>
+        <div class="card reveal" data-khoa="general" data-loai="video">
+          <div class="card-icon" aria-hidden="true">🎬</div>
+          <h3>Pronunciation Masterclass</h3>
+          <p class="meta">Video · 30 phút · Chung</p>
+          <p>Hướng dẫn phát âm chuẩn 44 âm tiếng Anh, so sánh Anh-Anh và Anh-Mỹ.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="pronunciation-masterclass.mp4">Tải về</a>
+        </div>
+        <div class="card reveal" data-khoa="general" data-loai="pdf">
+          <div class="card-icon" aria-hidden="true">📄</div>
+          <h3>IELTS Tips & Tricks</h3>
+          <p class="meta">PDF · 18 trang · Chung</p>
+          <p>Mẹo làm bài thi IELTS 4 kỹ năng, quản lý thời gian và tránh bẫy điểm.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="ielts-tips.pdf">Tải về</a>
+        </div>
+        <div class="card reveal" data-khoa="general" data-loai="audio">
+          <div class="card-icon" aria-hidden="true">🎧</div>
+          <h3>Daily English Conversations</h3>
+          <p class="meta">Audio · 60 phút · Chung</p>
+          <p>30 đoạn hội thoại hàng ngày: đi chợ, gặp bạn, xin việc, du lịch.</p>
+          <a href="#download-modal" class="btn btn-outline btn-small" data-file="daily-conversations.mp3">Tải về</a>
+        </div>
+      </div>
+      <div class="text-center mt-2 reveal">
+        <p>Tài liệu được lưu trữ trên <a href="https://drive.google.com/drive/folders/placeholder" target="_blank" rel="noopener">Google Drive NovaCenter</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="download-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <h3 id="modal-title">Điền thông tin để tải tài liệu</h3>
+      <form id="download-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" id="download-file" name="file">
+        <div class="form-group">
+          <label for="dl-name">Họ và tên</label>
+          <input type="text" id="dl-name" name="name" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="dl-email">Email</label>
+          <input type="email" id="dl-email" name="email" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="dl-phone">Số điện thoại</label>
+          <input type="tel" id="dl-phone" name="phone" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="dl-khoa">Bạn quan tâm khóa học nào?</label>
+          <select id="dl-khoa" name="khoa_quan_tam">
+            <option value="">Chọn khóa học</option>
+            <option value="spark">SPARK</option>
+            <option value="rise">RISE</option>
+            <option value="leader">LEADER</option>
+            <option value="chua-ro">Chưa rõ</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Xác nhận & Tải về</button>
+        <button type="button" class="btn btn-secondary" id="modal-close">Hủy</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-navy">Nova</span><span class="logo-orange">Center</span></a>
+        <p>Học để nói. Nói để dùng.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Liên kết</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="khoa-hoc.html">Khóa học</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Liên hệ</h4>
+        <p>127/5 Khóm Đông Thuận, P. Thới Sơn, Tịnh Biên, An Giang</p>
+        <p>Email: novacentermientay@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 NovaCenter. Mọi quyền được bảo lưu.</p>
+      <p><a href="privacy-policy.html">Chính sách bảo mật</a> | <a href="terms-of-service.html">Điều khoản dịch vụ</a></p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Lên đầu trang">↑</button>
+
+<script src="shared.js"></script>
+<script>
+(function() {
+  const khoaSelect = document.getElementById('filter-khoa');
+  const loaiSelect = document.getElementById('filter-loai');
+  const cards = document.querySelectorAll('#tai-lieu-grid .card');
+  function filter() {
+    const khoa = khoaSelect.value;
+    const loai = loaiSelect.value;
+    cards.forEach(card => {
+      const matchKhoa = khoa === 'all' || card.dataset.khoa === khoa;
+      const matchLoai = loai === 'all' || card.dataset.loai === loai;
+      card.style.display = (matchKhoa && matchLoai) ? '' : 'none';
+    });
+  }
+  khoaSelect.addEventListener('change', filter);
+  loaiSelect.addEventListener('change', filter);
+
+  const modal = document.getElementById('download-modal');
+  const fileInput = document.getElementById('download-file');
+  document.querySelectorAll('[data-file]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      fileInput.value = btn.dataset.file;
+      modal.classList.add('active');
+      document.getElementById('dl-name').focus();
+    });
+  });
+  document.getElementById('modal-close').addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.remove('active');
+  });
+})();
+</script>
+</body>
+</html>
